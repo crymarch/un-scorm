@@ -6,8 +6,6 @@ A web-based tool for extracting and viewing content from SCORM packages without 
 
 Access the application here: **[https://crymarch.github.io/un-scorm/](https://yourusername.github.io/un-scorm/)**
 
-*(Replace `yourusername` with your actual GitHub username)*
-
 ## 📋 Features
 
 - **Extract SCORM Packages**: Upload ZIP files and extract their contents
