@@ -7,25 +7,7 @@
     <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪄</text></svg>">
-    <script>
-        // Only load Pendo if not running locally
-        if (window.location.protocol !== 'file:') {
-            (function(apiKey){
-                (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
-                v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
-                    o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-                    y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-                    z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-                    pendo.initialize({
-            
-                        visitor: {
-                                id:'UNSCORM_USER'
-                         }
-                       
-                    });
-            })('20c388f9-6b44-46a9-4e89-461dec40699e');
-        }
-        </script>
+
     <title>Un-SCORM</title>
     <style>
         * {
@@ -295,12 +277,17 @@
         <div style="max-width: 800px; margin: 0 auto;">
             <p style="margin: 0 0 15px 0; font-weight: 600; color: #495057;">📚 Need Help or Have Feedback?</p>
             <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                <a href="https://github.com/crymarch/un-scorm/issues" 
+                <a href="https://docs.google.com/document/d/1GHh8QSlrmzEcP7FeomaZsmL7F0db6VGD1zR2knNg6v0/edit?tab=t.0" 
+                   target="_blank" 
+                   style="color: #007bff; text-decoration: none; display: flex; align-items: center; gap: 5px;">
+                    📖 User Guide
+                </a>
+                <a href="https://docs.google.com/document/d/1GHh8QSlrmzEcP7FeomaZsmL7F0db6VGD1zR2knNg6v0/edit?tab=t.670ks06i8gue" 
                    target="_blank" 
                    style="color: #dc3545; text-decoration: none; display: flex; align-items: center; gap: 5px;">
                     🐛 Report Bug
                 </a>
-                <a href="https://github.com/crymarch/un-scorm/issues" 
+                <a href="https://docs.google.com/document/d/1GHh8QSlrmzEcP7FeomaZsmL7F0db6VGD1zR2knNg6v0/edit?tab=t.frgq9faptgfo" 
                    target="_blank" 
                    style="color: #28a745; text-decoration: none; display: flex; align-items: center; gap: 5px;">
                     💡 Feature Request
@@ -4109,9 +4096,9 @@
                 text = text.replace(/Â¡/g, '¡');    // Inverted exclamation
                 text = text.replace(/Â¿/g, '¿');    // Inverted question mark
                 
-                // Specific patterns from the user's file
+                // Fix common text encoding issues
                 text = text.replace(/customersâ/g, "customers'");
-                text = text.replace(/Red HatÂ®/g, "Red Hat®");
+                text = text.replace(/â®/g, "®");  // Fix trademark symbol encoding
                 text = text.replace(/â([a-z])/g, "'$1");    // â followed by letter becomes '
                 text = text.replace(/([a-z])â/g, "$1'");    // letter followed by â becomes '
                 text = text.replace(/â\s/g, "' ");         // â followed by space becomes '
@@ -5057,7 +5044,7 @@
                 
                 // 2. Fix severely corrupted URLs that lost slashes and have truncated paths
                 text = text.replace(/https?:\/\/([a-zA-Z0-9\-\.]+)([a-zA-Z0-9\-\.\/]*)/g, function(match, domain, path) {
-                    // Check for common corrupted patterns
+                    // Check for common corrupted domain patterns
                     if (domain.includes('contentredhat') || domain.includes('content.redhat')) {
                         let fixedDomain = 'content.redhat.com';
                         
@@ -5094,10 +5081,10 @@
                         console.log('⚠️ Still contains https// after fix attempt');
                     }
                     if (text.includes('content.redhat.com')) {
-                        console.log('✓ Contains proper content.redhat.com');
+                        console.log('✓ Contains properly formatted content URLs');
                     }
                     if (text.includes('contentredhat')) {
-                        console.log('⚠️ Contains broken contentredhat pattern');
+                        console.log('⚠️ Contains broken content URL patterns');
                     }
                 }
                 
@@ -5125,9 +5112,9 @@
                 text = text.replace(/Â¡/g, '¡');    // Inverted exclamation
                 text = text.replace(/Â¿/g, '¿');    // Inverted question mark
                 
-                // Specific patterns from the user's file
+                // Fix common text encoding issues
                 text = text.replace(/customersâ/g, "customers'");
-                text = text.replace(/Red HatÂ®/g, "Red Hat®");
+                text = text.replace(/â®/g, "®");  // Fix trademark symbol encoding
                 text = text.replace(/â([a-z])/g, "'$1");    // â followed by letter becomes '
                 text = text.replace(/([a-z])â/g, "$1'");    // letter followed by â becomes '
                 text = text.replace(/â\s/g, "' ");         // â followed by space becomes '
