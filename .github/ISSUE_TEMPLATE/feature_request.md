@@ -1,20 +1,23 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for Un-SCORM
 title: ''
-labels: ''
+labels: enhancement
 assignees: ''
-
 ---
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+## Problem or use case
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
+What are you trying to do? What is missing today?
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+## Proposed solution
 
-**Additional context**
-Add any other context or screenshots about the feature request here.
+Describe the behavior or UI you have in mind.
+
+## Alternatives considered
+
+Optional: other approaches you thought about.
+
+## Additional context
+
+Optional: links, examples, or SCORM authoring tools involved.

@@ -4,7 +4,7 @@ A web-based tool for extracting and viewing content from SCORM packages without 
 
 ## 🚀 Live Application
 
-Access the application here: **[https://crymarch.github.io/un-scorm/](https://yourusername.github.io/un-scorm/)**
+Access the application here: **[https://crymarch.github.io/un-scorm/](https://crymarch.github.io/un-scorm/)**
 
 ## 📋 Features
 
@@ -21,6 +21,8 @@ Access the application here: **[https://crymarch.github.io/un-scorm/](https://yo
 - **No Data Collection**: Files are processed entirely in your browser
 - **No Server Storage**: Nothing is saved or transmitted to any server
 - **Secure by Design**: Uses HTTPS and runs locally in your browser
+
+For reporting security issues, see [SECURITY.md](SECURITY.md).
 
 ## 🛠️ Supported SCORM Types
 
@@ -40,15 +42,18 @@ Access the application here: **[https://crymarch.github.io/un-scorm/](https://yo
 ## 🔧 Development
 
 This is a single-page application built with:
+
 - Vanilla JavaScript
 - JSZip library for ZIP file processing
 - PDF.js for PDF handling
 - Pure CSS for styling
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to run the project locally and submit changes.
+
 ## 📄 License
 
-Open source - feel free to use and modify!
+Licensing is not finalized yet.
 
 ## 🤝 Contributing
 
-Found a bug or want to add a feature? Feel free to open an issue or submit a pull request!
+Bug reports and ideas are welcome—use the [issue templates](https://github.com/crymarch/un-scorm/issues/new/choose). For pull requests, see [CONTRIBUTING.md](CONTRIBUTING.md).
